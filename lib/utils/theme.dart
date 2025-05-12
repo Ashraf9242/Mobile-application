@@ -11,23 +11,24 @@ class AppTheme {
 
   // Light Theme
   static final ThemeData lightTheme = ThemeData(
-    primaryColor: primaryColor,
-    scaffoldBackgroundColor: Colors.white,
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
+      brightness: Brightness.light,
       primary: primaryColor,
       secondary: accentColor,
     ),
+    scaffoldBackgroundColor: Colors.white,
     appBarTheme: const AppBarTheme(
       backgroundColor: primaryColor,
       elevation: 0,
     ),
-    cardTheme: CardTheme(
-      color: Colors.white,
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-    ),
+cardTheme: CardThemeData(
+  color: cardColor,
+  elevation: 4,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+),
+
     textTheme: const TextTheme(
       headlineLarge: TextStyle(
         color: Color(0xFF212121),
@@ -52,25 +53,25 @@ class AppTheme {
 
   // Dark Theme
   static final ThemeData darkTheme = ThemeData(
-    primaryColor: primaryColor,
-    scaffoldBackgroundColor: backgroundColor,
-    colorScheme: ColorScheme.dark(
+    colorScheme: const ColorScheme.dark(
+      brightness: Brightness.dark,
       primary: primaryColor,
       secondary: accentColor,
       background: backgroundColor,
       surface: cardColor,
     ),
+    scaffoldBackgroundColor: backgroundColor,
     appBarTheme: const AppBarTheme(
       backgroundColor: backgroundColor,
       elevation: 0,
     ),
-    cardTheme: CardTheme(
-      color: cardColor,
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-    ),
+  cardTheme: CardThemeData(
+  color: cardColor,
+  elevation: 4,
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+),
     textTheme: const TextTheme(
       headlineLarge: TextStyle(
         color: textColor,
